@@ -1,0 +1,22 @@
+{
+  "name": "rest-js-demo",
+  "version": "1.0.0",
+  "description": "Demo as rest-js consumer",
+  "main": "demo.ts",
+  "author": "Ryan Chen",
+  "license": "MIT",
+  "scripts": {
+    "add-self:js": "touch node_modules/rest-js.js && echo \"module.exports = require('../..');\" > node_modules/rest-js.js",
+    "add-self:ts": "touch node_modules/rest-js.d.ts && echo \"import myLib from '../../';export = myLib;\" > node_modules/rest-js.d.ts",
+    "remove-self:js": "rm node_modules/rest-js.js",
+    "remove-self:ts": "rm node_modules/rest-js.d.ts",
+    "add-self": "npm run add-self:js && npm run add-self:ts",
+    "remove-self": "npm run remove-self:js && npm run remove-self:ts",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.5",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.4"
+  }
+}
